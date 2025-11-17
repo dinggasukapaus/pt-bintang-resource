@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bintang Resources - The 100-Meter Advantage. We mine limestone next door with integrated value chain from quarry to quicklime.">
+    <meta name="keywords" content="limestone, mining, quicklime, North Morowali, Central Sulawesi, vertical integration">
+    <title>Bintang Resources - The 100-Meter Advantage</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+
+        @font-face {
+            font-family: 'FoundersGrotesk';
+            src: url('asset/FoundersGrotesk/FoundersGrotesk-Bold.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        :root {
+            --primary-gold: linear-gradient(90deg,rgba(204, 164, 78, 1) 0%, rgba(247, 207, 135, 1) 50%, rgba(222, 183, 104, 1) 100%);
+            --dark-gold: #B8941E;
+            --light-bg: #F5F5F0;
+            --green: #68A682;
+            --dark-green: #4A8A5F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Inter", sans-serif;
+            overflow-x: hidden;
+        }
+        hr{
+            margin: 1rem 0;
+            color: inherit;
+            border: solid black 1px !important;
+            opacity: 1 !important;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: var(--primary-gold) !important;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin: 1rem;
+            border-radius: 40px;
+        }
+        
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333 !important;
+        }
+        
+        .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgb(217 209 51 / 30%), rgb(147 138 25 / 30%)), url('asset/hero.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-top: 11%;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            border-radius: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-family: 'FoundersGrotesk', sans-serif;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+        
+        .hero .btn {
+            margin: 0.5rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom {
+            background: var(--green);
+            border: none;
+            color: white;
+        }
+        
+        .btn-primary-custom:hover {
+            background: var(--dark-green);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .btn-outline-custom {
+            border: 2px solid white;
+            color: white;
+            background: transparent;
+        }
+        
+        .btn-outline-custom:hover {
+            background: white;
+            color: #333;
+            transform: translateY(-3px);
+        }
+        
+        /* Section Title */
+        .section-title {
+            color: var(--dark-gold) !important;
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-family: 'FoundersGrotesk', sans-serif;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 5rem 0;
+            /* background: var(--light-bg); */
+        }
+        .about-section h1{
+            font-size: 4.5rem
+        }        
+        .about-section h4{
+            font-size: 2.5rem
+        }        
+        .advantage-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .advantage-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .advantage-box h4 {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .eliminated-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .eliminated-box h2 {
+            color: var(--green);
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        .team-img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        /* Result Section */
+        .result-section {
+            padding: 5rem 0;
+            background: white;
+        }
+        .result-section h4{
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        
+        .result-card {
+            background: #FFFACD;
+            padding: 2.5rem;
+            border-radius: 15px;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+        
+        .result-card:hover {
+            border-color: var(--primary-gold);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .result-card h3 {
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        /* Value Chain */
+        .value-chain-section {
+            padding: 5rem 0;
+            /* background: var(--light-bg); */
+        }
+        
+        .value-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .value-logo {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pwa-logo {
+            background: url('asset/icon our 1.png') no-repeat center center;
+            background-size: 100%;
+            width: 300px;
+            height: 157px;
+        }
+        
+        .mac-logo {
+            background: url('asset/icon our 2.png') no-repeat center center;
+            background-size: 100%;
+            width: 300px;
+            height: 157px;
+        }
+        
+        .value-card h3 {
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        
+        .value-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .value-card li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .value-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .btn-download {
+            background: var(--green);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-download:hover {
+            background: var(--dark-green);
+            transform: translateY(-3px);
+        }
+        
+        /* Slider Section */
+        .slider-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .carousel-caption.custom-caption {
+            left: 32px;
+            right: auto;
+            bottom: 40px;
+            top: auto;
+            text-align: left;
+            background: none;
+            padding: 0;
+        }
+        .slider-controls {
+            position: absolute;
+            left: 81px;
+            bottom: 52px;
+            display: flex;
+            gap: 16px;
+            z-index: 10;
+        }
+        .carousel-fade .carousel-item {
+            transition: opacity 0.7s ease-in-out;
+        }
+        
+        .comparison-box {
+            background: var(--light-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .comparison-box:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .comparison-box h3 {
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-box {
+            background: var(--primary-gold);
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            height: 100%;
+        }
+        
+        .highlight-box h3 {
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        .result-box {
+            background: #FFFACD;
+            padding: 2.5rem;
+            border-radius: 15px;
+            height: 100%;
+        }
+        
+        .result-box h3 {
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        
+        .result-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .result-box li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .result-box li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        /* RFQ Section */
+        .rfq-section {
+            padding: 5rem 0;
+            background: var(--light-bg);
+            text-align: center;
+            margin: 1rem;
+            border-radius: 40px;
+        }
+        
+        .rfq-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        
+        .rfq-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-gold);
+            padding: 3rem 0 1rem;
+            color: #333;
+            margin: 1rem;
+            border-radius: 40px;
+        }
+        
+        footer h5 {
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        footer ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: white;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            background: white;
+            color: #333;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: #333;
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(0,0,0,0.1);
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            text-align: start;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .eliminated-box h2 {
+                font-size: 2rem;
+            }
+            .about-section h1{
+                font-size: 2rem;
+            }
+            .pwa-logo{
+                width: 265px;
+            }
+            .mac-logo{
+                width: 265px;
+            }    
+        }
+    </style>
+</head>
+<body>
+            <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="asset/logo.png" alt="Bintang Resources" srcset="" width="200px" height="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#about">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#business">BUSINESS</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#publications">PUBLICATIONS</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h1>We Don't Buy Limestone.<br>We Mine It Next Door.</h1>
+                <p>From quarry blast to quicklime loadout in <strong>100 meters</strong>—the shortest, most controlled limestone-to-lime value chain in Sulawesi. No middlemen. No quality drift. Just industrial-grade reliability when your operations can't afford downtime.</p>
+                <div class="mt-4">
+                    <a href="#about" class="btn btn-primary-custom">See More</a>
+                    <a href="#video" class="btn btn-outline-custom">Watch Videos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- About Section -->
+<section id="about" class="about-section">
+    <div class="mx-4">
+        <h2 class="section-title" style="color: #D5B86A; font-weight:800;">The 100-Meter Advantage</h2>
+
+        <div class="row mb-5 advantage-box" data-aos="fade-up" data-aos-delay="0" style="background: #F5F6F3; padding: 32px;">
+            
+                <div class="col-lg-6">
+                    <h4 style="font-weight: bold;">Why does distance matter?</h4>
+                    <hr>
+                    <p>Every handoff introduces contamination risk.</p>
+                    <p>Every kilometer adds logistical failure points.</p>
+                    <p>Every intermediary dilutes accountability.</p>
+                </div>
+            
+                <div class="col-lg-6">
+                    <h1 class="text-center" style="color: #52A083; font-weight: 800; text-align:center;">
+                        We eliminated<br>all three.
+                    </h1>
+                </div>
+           
+        </div>
+
+        <div class="row mb-5 eliminated-box" data-aos="fade-up" data-aos-delay="100" style="background: #F5F6F3; padding: 32px;">
+            <div class="col-lg-6 mb-4">
+                <img src="asset/about.png" alt="Team" class="team-img mt-4 d-block w-100" style="width:100%; border-radius:16px;">
+            </div>
+
+            <div class="col-lg-6 d-flex flex-column justify-content-center mb-4">
+                    <h4 style="font-weight: bold;">How do we pull it off?</h4>
+                    <p style="margin-bottom:8px;"><strong>North Morowali, Central Sulawesi</strong></p>
+                    <hr>
+                    <p>
+                        <strong>Our quarry-to-kiln distance: 100 meters.</strong> That's not a marketing claim—
+                        <strong>it's engineered</strong>
+                        vertical integration. Mine, crush, and calcine under one governance structure,
+                        one quality protocol, one delivery promise.
+                    </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Result Section -->
+    <section id="result" class="result-section">
+        <div class="mx-4">
+            <h2 class="section-title" data-aos="fade-up">The Result?</h2>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="result-card">
+                        <h4>End-to-End Quality Control</h4>
+                        <p>quarry → crusher → kiln under one governance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="result-card">
+                        <h4>Strategic Logistics</h4>
+                        <p>~6-10 km to ports; short haul from quarry to kiln (~100 m).</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="result-card">
+                        <h4>Reliable Volumes</h4>
+                        <p>300-350 tph crushing; planned quicklime ~500 TPD (scalable to 1,000 TPD).</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="result-card">
+                        <h4>Majority Ownership</h4>
+                        <p>agile CAPEX, tighter governance, dependable supply.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Chain Section -->
+    <section id="business" class="value-chain-section">
+        <h2 class="section-title" data-aos="fade-up">Our Integrated Value Chain</h2>
+        <div class="mx-4 p-3 rounded-4" style="background: #F5F6F3;">
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="value-card">
+                        <div class="value-logo pwa-logo"></div>
+                        <h3>Upstream: PWA Limestone</h3>
+                        <ul>
+                            <li>97.57 ha C&C-certified operation</li>
+                            <li>Sucofindo-validated chemistry: CaCO₃ >95%, CaO >53%</li>
+                            <li>Standard sizing: 3/5 cm, 5/9 cm (custom runs available)</li>
+                            <li>Direct loading to barges: 6 km to private jetty, 10 km to Pelindo</li>
+                        </ul>
+                        <button class="btn btn-download mt-3">Download Limestone Spec Sheet</button>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="value-card">
+                        <div class="value-logo mac-logo"></div>
+                        <h3>Downstream: MAC Quicklime</h3>
+                        <ul>
+                            <li>Preheater → Rotary Kiln → Shaft Cooler configuration</li>
+                            <li>DCS/PLC control with real-time monitoring (temp, pressure, flow)</li>
+                            <li>Baghouse emissions system for <50 mg/Nm³ particulate</li>
+                            <li>Target product: free CaO >90% (based on PWA feedstock consistency)</li>
+                        </ul>
+                        <button class="btn btn-download mt-3">Start an Off-take Discussion</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+<!-- Slider Section -->
+
+<section class="slider-section" style="background:#fff; padding:40px 0;">
+    <div class="mx-4">
+        <!-- Row 1 - Slider -->
+        <div class="row mb-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="col-12">
+                <!-- Bootstrap Carousel with Fade -->
+                <div id="customCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" style="border-radius:32px; overflow:hidden; box-shadow:0 0 20px rgba(0,0,0,0.04); position:relative;">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <img src="asset/image slider 1.png" class="d-block w-100" style="height:100vh; object-fit:cover; border-radius:32px;">
+                            <div class="carousel-caption custom-caption">
+                                <h2 style="font-size:2.5rem; font-weight:700; margin-bottom:18px; line-height:1.2; color:#fff;">
+                                    How We’re <br> Very Competitive
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="asset/hero.png" class="d-block w-100" style="height:100vh; object-fit:cover; border-radius:32px;">
+                            <div class="carousel-caption custom-caption">
+                                <h2 style="font-size:2.5rem; font-weight:700; margin-bottom:18px; line-height:1.2; color:#fff;">
+                                    Judul Slide 2 <br> Subtitle Slide 2
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tombol Slider di Pojok Kiri Bawah -->
+                    <div class="slider-controls">
+                        <button class="slider-btn carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev"
+                            style="background: #68D391; border: none; width:48px; height:48px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:1.8rem; color:#fff;">
+                            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="slider-btn carousel-control-next order-first" type="button" data-bs-target="#customCarousel" data-bs-slide="next"
+                            style="background: #68D391; border: none; width:48px; height:48px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:1.8rem; color:#fff;">
+                            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 - Cards -->
+        <div class="row g-4" style="margin-top:16px;">
+            <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="100" style="background: #F5F6F3; border-radius:24px; padding:32px; min-height:180px; display:flex; flex-direction:column; justify-content:center; box-shadow:0 0 1px rgba(0,0,0,0.04);">
+                <div>
+                    <h3 style="font-weight:700; margin-bottom:16px;">Most Suppliers</h3>
+                    <p style="margin-bottom:4px;">Buy limestone → truck to kiln (50+ km)</p>
+                    <p style="margin-bottom:0;">
+                        → quality varies by source 
+                        <br>
+                        <span style="font-weight:700; color:#333;">blame game when specs drift</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="200" style="background: #FFE980; border-radius:24px; padding:32px; min-height:180px; display:flex; flex-direction:column; justify-content:center;">
+                <div>
+                    <div style="margin-bottom:10px;">
+                        <img src="asset/logo.png" alt="Bintang Logo" style="height:38px;">
+                    </div>
+                    <!-- <h3 style="font-weight:700; margin-bottom:12px;">BINTANG RESOURCES</h3> -->
+                    <p>
+                        Own quarry + own kiln + 100m distance
+                    </p>
+                    <p>
+                        = one partner to trust, minimalized specs drift, centralized control
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-3" data-aos="fade-up" data-aos-delay="300" style="background: #FFE980; border-radius:24px; padding:32px; min-height:180px; display:flex; flex-direction:column; justify-content:center;">
+                <div>
+                    <h3 style="font-weight:700; margin-bottom:12px;">Result</h3>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li>No finger-pointing across vendors when chemistry drifts</li>
+                        <li>No logistics lag between mining and processing</li>
+                        <li>No compromise between "fast" and "consistent"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- RFQ Section -->
+    <section id="contact" class="rfq-section">
+        <div class="mx-4 rounded-4" data-aos="fade-up">
+            <h2>Ready to Lock In Reliable Supply?</h2>
+            <p>Share your specs, volumes, delivery location, and target timeline. Our technical team will respond within 1 business day.</p>
+            <button class="btn btn-primary-custom btn-lg">Submit Your RFQ Now!</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="asset/logo.png" alt="Bintang Resources" srcset="" width="200px" height="auto">
+                    <p class="mt-3">Wisma MRA Lt. 17 Unit A<br>
+                    Jln. T.B. Simatupang No. 19,<br>
+                    Jakarta Selatan, Indonesia 12430</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#business">Business</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><a href="mailto:endang@bintangresources.com">endang@bintangresources.com</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Social Media</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Bintang Resources © 2025 | IUP OP Licensed | Powered by vertical integration</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Parallax effect for hero
+        window.addEventListener('scroll', function() {
+            const hero = document.querySelector('.hero');
+            const scrolled = window.pageYOffset;
+            hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+        });
+        
+        // Counter animation
+        const counters = document.querySelectorAll('.result-card h3');
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+        
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+        
+        // Add hover effect to cards
+        const cards = document.querySelectorAll('.result-card, .value-card, .comparison-box');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+        });
+    </script>
+</body>
+</html>
