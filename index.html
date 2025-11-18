@@ -94,10 +94,14 @@
             text-align: center;
             color: white;
             position: relative;
-            margin-top: 11%;
+            margin-top: 1%;
             margin-left: 1rem;
             margin-right: 1rem;
             border-radius: 40px;
+        }
+
+        .hero .description-hero{
+                margin-top: 16rem;
         }
         
         .hero h1 {
@@ -106,6 +110,7 @@
             margin-bottom: 1.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             font-family: 'FoundersGrotesk', sans-serif;
+            
         }
         
         .hero p {
@@ -139,6 +144,7 @@
             border: 2px solid white;
             color: white;
             background: transparent;
+            border:none;
         }
         
         .btn-outline-custom:hover {
@@ -149,12 +155,17 @@
         
         /* Section Title */
         .section-title {
-            color: var(--dark-gold) !important;
+            /* color: var(--dark-gold) !important; */
             font-size: 3rem;
             font-weight: bold;
             text-align: center;
             margin-bottom: 3rem;
             font-family: 'FoundersGrotesk', sans-serif;
+            background: #CCA44E;
+            background: repeating-linear-gradient(to right, #CCA44E 0%, #FFCD62 8%, #EFC05B 15%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
         }
         
         /* About Section */
@@ -239,7 +250,7 @@
         
         /* Value Chain */
         .value-chain-section {
-            padding: 5rem 0;
+            padding: 0rem 0;
             /* background: var(--light-bg); */
         }
         
@@ -512,11 +523,17 @@
             .hero h1 {
                 font-size: 2rem;
             }
+
+            .hero{
+                min-height: 80vh;
+            }
             
             .hero p {
                 font-size: 1rem;
             }
-            
+            .hero .description-hero{
+                margin-top: 3rem;
+            }
             .section-title {
                 font-size: 2rem;
             }
@@ -538,7 +555,7 @@
 </head>
 <body>
             <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="asset/logo.png" alt="Bintang Resources" srcset="" width="200px" height="auto">
@@ -560,15 +577,15 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div data-aos="fade-up">
+        <div class="d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">      
+            <div class="title-hero">
                 <h1>We Don't Buy Limestone.<br>We Mine It Next Door.</h1>
-                <p>From quarry blast to quicklime loadout in <strong>100 meters</strong>—the shortest, most controlled limestone-to-lime value chain in Sulawesi. No middlemen. No quality drift. Just industrial-grade reliability when your operations can't afford downtime.</p>
-                <div class="mt-4">
-                    <a href="#about" class="btn btn-primary-custom">See More</a>
-                    <a href="#video" class="btn btn-outline-custom">Watch Videos</a>
-                </div>
             </div>
+            <div class="description-hero">
+                <p class="px-5 px-md-2">From quarry blast to quicklime loadout in <strong>100 meters</strong>—the shortest, most controlled limestone-to-lime value chain in Sulawesi. No middlemen. No quality drift. Just industrial-grade reliability when your operations can't afford downtime.</p>
+                <a href="#about" class="btn btn-primary-custom">See More</a>
+                <a href="#video" class="btn btn-outline-custom">Watch Videos</a>
+            </div>          
         </div>
     </section>
 
@@ -667,6 +684,7 @@
                             <li>Direct loading to barges: 6 km to private jetty, 10 km to Pelindo</li>
                         </ul>
                         <button class="btn btn-download mt-3">Download Limestone Spec Sheet</button>
+                        <p class="mt-3"><em>On development</em></p>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
@@ -680,6 +698,7 @@
                             <li>Target product: free CaO >90% (based on PWA feedstock consistency)</li>
                         </ul>
                         <button class="btn btn-download mt-3">Start an Off-take Discussion</button>
+                        <p class="mt-3"><em>On development</em></p>
                     </div>
                 </div>
             </div>
@@ -690,7 +709,7 @@
 
 <!-- Slider Section -->
 
-<section class="slider-section" style="background:#fff; padding:40px 0;">
+<section class="slider-section" style="background:#fff; padding:20px 0;">
     <div class="mx-4">
         <!-- Row 1 - Slider -->
         <div class="row mb-4" data-aos="fade-up" data-aos-delay="0">
@@ -733,10 +752,9 @@
             </div>
         </div>
 
-        <!-- Row 2 - Cards -->
-        <div class="row g-4" style="margin-top:16px;">
-            <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="100" style="background: #F5F6F3; border-radius:24px; padding:32px; min-height:180px; display:flex; flex-direction:column; justify-content:center; box-shadow:0 0 1px rgba(0,0,0,0.04);">
-                <div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="result-card" style="background: #F5F6F3;">
                     <h3 style="font-weight:700; margin-bottom:16px;">Most Suppliers</h3>
                     <p style="margin-bottom:4px;">Buy limestone → truck to kiln (50+ km)</p>
                     <p style="margin-bottom:0;">
@@ -746,8 +764,8 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="200" style="background: #FFE980; border-radius:24px; padding:32px; min-height:180px; display:flex; flex-direction:column; justify-content:center;">
-                <div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="result-card" style="background: #FFE980;">
                     <div style="margin-bottom:10px;">
                         <img src="asset/logo.png" alt="Bintang Logo" style="height:38px;">
                     </div>
@@ -760,8 +778,8 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 mb-3" data-aos="fade-up" data-aos-delay="300" style="background: #FFE980; border-radius:24px; padding:32px; min-height:180px; display:flex; flex-direction:column; justify-content:center;">
-                <div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="result-card" style="background: #FFE980;">
                     <h3 style="font-weight:700; margin-bottom:12px;">Result</h3>
                     <ul style="margin:0; padding-left:20px;">
                         <li>No finger-pointing across vendors when chemistry drifts</li>
@@ -770,6 +788,7 @@
                     </ul>
                 </div>
             </div>
+            
         </div>
     </div>
 </section>
